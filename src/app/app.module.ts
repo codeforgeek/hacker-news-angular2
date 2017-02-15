@@ -3,18 +3,20 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { AppComponent } from './app.component';
+import { HackerNewsComponent } from './app.component';
+
+import { HackerNewsService } from './app.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    HackerNewsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [HackerNewsService],
+  bootstrap: [HackerNewsComponent]
 })
 export class AppModule { }
